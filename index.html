@@ -27,7 +27,7 @@
                     <p>Humidity</p>
                     <div class="col">
                         <img src="images/wind.png">
-                        <div>
+                </div>
                             <p class="wind">15km/h</p>
                             <p>wind speed</p>
         
@@ -36,5 +36,21 @@
         </div>
     </div>
 </div>
+
+<script>
+
+    const apikey ="8e519a05779e532bb53dd984b4c75b75";
+    const apiurl ="https://api.openweathermap.org/data/2.5/weather?units=metric&q=germany";
+
+    async function checkweather(){
+        const response = await fetch(apiurl + '&appid=${apikey}');
+        var data = await response.json();
+
+        console.log(data);
+    }
+
+    checkweather();
+ </script>
 </body>
 </html> 
+
