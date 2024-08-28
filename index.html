@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <div class="card">
     <div class="search">
         <input type="text" placeholder="enter city name" 
@@ -43,7 +41,7 @@
     const apiurl ="https://api.openweathermap.org/data/2.5/weather?units=metric&q=germany";
 
     async function checkweather(){
-        const response = await fetch(apiurl + '&appid=${apikey}');
+        const response = await fetch(apiurl + `&appid=${apikey}`);
         var data = await response.json();
 
         console.log(data);
